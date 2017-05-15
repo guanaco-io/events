@@ -1,0 +1,10 @@
+{
+  "timestamp": "2017-05-12T22:40:13.995",
+  "logger": "Test",
+  "message": "Het is niet kapot, echt niet!",
+  "level": "INFO",
+  "mdc": {
+    "booleanKey": true,
+    "stringKey": "stringValue"
+  }
+}

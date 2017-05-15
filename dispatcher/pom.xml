@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>be.anova</groupId>
+        <artifactId>guanaco</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>be.anova.guanaco</groupId>
+    <artifactId>dispatcher</artifactId>
+    <packaging>bundle</packaging>
+
+    <name>Anova :: Guanaco :: Dispatcher</name>
+
+    <properties>
+        <osgi.export.package>be.anova.guanaco.dispatcher</osgi.export.package>
+        <osgi.bundle.activator>be.anova.guanaco.dispatcher.DispatcherActivator</osgi.bundle.activator>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>be.anova.guanaco</groupId>
+            <artifactId>api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-osgi_2.11</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

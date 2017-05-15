@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<features name='guanaco-${project.version}'>
+
+    <feature name="guanaco-dispatcher" version="${project.version}" resolver="(obr)">
+        <bundle dependency="true">mvn:io.spray/spray-json_2.11/${spray.version}</bundle>
+        <bundle>mvn:be.anova.guanaco/events/${project.version}</bundle>
+        <bundle>mvn:be.anova.guanaco/api/${project.version}</bundle>
+        <bundle>mvn:org.scala-lang.modules/scala-java8-compat_2.11/0.8.0</bundle>
+        <bundle>mvn:com.typesafe/config/1.3.1</bundle>
+        <bundle>mvn:com.typesafe.akka/akka-actor_2.11/${akka.version}</bundle>
+        <bundle>mvn:com.typesafe.akka/akka-osgi_2.11/${akka.version}</bundle>
+        <bundle>mvn:be.anova.guanaco/dispatcher/${project.version}</bundle>
+    </feature>
+
+    <feature name="guanaco-log-appender" version="${project.version}" resolver="(obr)">
+        <feature version="${project.version}">guanaco-dispatcher</feature>
+        <bundle>mvn:be.anova.guanaco.servicemix/logging/${project.version}</bundle>
+    </feature>
+
+    <feature name="guanaco-kafka" version="${project.version}" resolver="(obr)">
+        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka.version}_1</bundle>
+        <bundle>mvn:be.anova.guanaco.transports/kafka/${project.version}</bundle>
+    </feature>
+
+</features>
