@@ -1,10 +1,18 @@
 {
-  "timestamp": "2017-05-12T22:40:13.995",
-  "logger": "Test",
-  "message": "Het is niet kapot, echt niet!",
+  "timestamp": "2017-05-26T16:40:16.045Z",
+  "logger": "be.e5mode.smx.navision.impl.NavisionAccessImpl",
+  "message": "Ophalen van page (50 items vanaf 0) voor URI http://ecgdcnav02.holding.local:7048/E5_TEST/OData/Company('Master')/GeneralAccounts",
   "level": "INFO",
   "mdc": {
-    "booleanKey": true,
-    "stringKey": "stringValue"
+    "bundle.name": "be.e5mode.smx.navision.common",
+    "int.value": 10,
+    "boolean.value": true,
+    "camel.breadcrumbId": "ID-strider-43727-1495801917565-41-104385",
+    "camel.exchangeId": "ID-strider-43727-1495801917565-41-104388",
+    "camel.routeId": "route278",
+    "camel.correlationId": "ID-strider-43727-1495801917565-41-104386",
+    "camel.contextId": "navisionAccountRoutes",
+    "camel.messageId": "ID-strider-43727-1495801917565-41-104387",
+    "bundle.version": "1.8.0.SNAPSHOT"
   }
 }

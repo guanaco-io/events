@@ -1,6 +1,6 @@
 package be.anova.guanaco.servicemix.logging
 
-import java.time.{LocalDate, LocalDateTime}
+import java.time.{LocalDate, LocalDateTime, ZonedDateTime}
 import java.util
 
 import be.anova.guanaco.dispatcher.EventDispatcher
@@ -19,7 +19,7 @@ class GuanacoPaxAppender extends PaxAppender {
 
   override def doAppend(paxLoggingEvent: PaxLoggingEvent): Unit = {
 
-    val event = LogEvent(LocalDateTime.now(), paxLoggingEvent.getLoggerName, paxLoggingEvent.getLevel.toString, paxLoggingEvent.getMessage, toMDC(paxLoggingEvent.getProperties))
+    val event = LogEvent(ZonedDateTime.now(), paxLoggingEvent.getLoggerName, paxLoggingEvent.getLevel.toString, paxLoggingEvent.getMessage, toMDC(paxLoggingEvent.getProperties), Option(paxLoggingEvent.getThrowableStrRep) map { _.toSeq})
     buffer foreach { dispatcher => dispatcher.send(event)}
   }
 

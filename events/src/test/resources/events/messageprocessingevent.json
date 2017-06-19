@@ -1,0 +1,19 @@
+{
+  "processing": {
+    "body": {
+      "javaType": "java.lang.String"
+    },
+    "timestamp": "2017-05-12T22:40:13.99Z",
+    "id": {
+      "id": "a1a1a1",
+      "breadcrumb": "b1b1b1"
+    },
+    "routing": {
+      "context": "MyCamelContext",
+      "route": "route1"
+    },
+    "headers": {
+      "somekey": "somevalue"
+    }
+  }
+}

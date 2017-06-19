@@ -2,8 +2,8 @@ package be.anova.guanaco.transports.kafka
 
 import java.util.Properties
 
-import be.anova.guanaco.api.LogEventListener
-import be.anova.guanaco.events.LogEvent
+import be.anova.guanaco.api.{LogEventListener, MessageEventListener}
+import be.anova.guanaco.events.{LogEvent, MessageEvent}
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 import org.apache.kafka.common.serialization.StringSerializer
 import spray.json._
@@ -11,7 +11,7 @@ import spray.json._
 /**
   * Created by gertv on 4/27/17.
   */
-class KafkaAppender extends LogEventListener {
+class KafkaAppender extends LogEventListener with MessageEventListener {
 
   def getProperties() = {
     val props = new Properties()
@@ -36,6 +36,11 @@ class KafkaAppender extends LogEventListener {
 
     import be.anova.guanaco.events.Events._
     producer.send(new ProducerRecord[String, String]("logging", event.toJson.compactPrint))
+  }
+
+  override def onMessageEvent(event: MessageEvent): Unit = {
+    import be.anova.guanaco.events.Events._
+    producer.send(new ProducerRecord[String, String]("messages", event.toJson.compactPrint))
   }
 
 }

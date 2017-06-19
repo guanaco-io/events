@@ -17,6 +17,11 @@
         <bundle>mvn:be.anova.guanaco.servicemix/logging/${project.version}</bundle>
     </feature>
 
+    <feature name="guanaco-camel-events" version="${project.version}" resolver="(obr)">
+        <feature version="${project.version}">guanaco-dispatcher</feature>
+        <bundle>mvn:be.anova.guanaco.servicemix/camel/${project.version}</bundle>
+    </feature>
+
     <feature name="guanaco-kafka" version="${project.version}" resolver="(obr)">
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka.version}_1</bundle>
         <bundle>mvn:be.anova.guanaco.transports/kafka/${project.version}</bundle>

@@ -3,7 +3,7 @@ package be.anova.guanaco.transports.kafka
 import java.util
 import java.util.Properties
 
-import be.anova.guanaco.api.{EventListener, LogEventListener}
+import be.anova.guanaco.api.{EventListener, LogEventListener, MessageEventListener}
 import org.ops4j.pax.logging.PaxLoggingService
 import org.osgi.framework.{BundleActivator, BundleContext, ServiceRegistration}
 import org.slf4j.LoggerFactory
@@ -26,6 +26,7 @@ class KafkaAppenderActivator extends BundleActivator {
 
     val appender = new KafkaAppender()
 
+    registrations += context.registerService[MessageEventListener](classOf[MessageEventListener], appender, new java.util.Hashtable())
     registrations += context.registerService[LogEventListener](classOf[LogEventListener], appender, new java.util.Hashtable())
     registrations += context.registerService[EventListener](classOf[EventListener], appender, new java.util.Hashtable())
   }

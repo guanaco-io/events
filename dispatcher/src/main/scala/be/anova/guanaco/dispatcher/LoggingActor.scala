@@ -23,7 +23,12 @@ class LoggingActor extends Actor with ActorLogging {
       context become listen(remaining)
     }
     case event: LogEvent =>
-      for (listener <- listeners) listener.onLogEvent(event)
+      for (listener <- listeners)
+        try {
+          listener.onLogEvent(event)
+        } catch {
+          case e: Exception => println(s"${e.getMessage} on ${event}")
+        }
     case value =>
       log.warning(s"Unexpected message ${value}")
   }

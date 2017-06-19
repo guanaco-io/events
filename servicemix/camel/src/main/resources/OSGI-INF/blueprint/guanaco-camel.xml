@@ -1,0 +1,11 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    
+    <service interface="org.apache.camel.spi.EventNotifier">
+        <bean class="be.anova.guanaco.servicemix.camel.GuanacoEventNotifier">
+            <argument>
+                <reference interface="be.anova.guanaco.dispatcher.EventDispatcher"/>
+            </argument>
+        </bean>
+    </service>
+
+</blueprint>

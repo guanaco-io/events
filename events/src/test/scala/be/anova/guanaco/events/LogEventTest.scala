@@ -15,7 +15,7 @@ class LogEventTest {
 
   @Test
   def readAndWriteLogEvent(): Unit = {
-    val input = IOUtils.toString(getClass.getClassLoader.getResource("events/logevent.json"), "UTF-8")
+    val input = IOUtils.toString(getClass.getClassLoader.getResource("events/logevent.json"), "UTF-8").trim
     val event = input.parseJson.convertTo[LogEvent]
     val output = event.toJson.prettyPrint
     assertEquals(input, output)
