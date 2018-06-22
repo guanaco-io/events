@@ -23,7 +23,7 @@
     </feature>
 
     <feature name="guanaco-kafka" version="${project.version}" resolver="(obr)">
-        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.kafka-clients/${kafka.version}_1</bundle>
+        <bundle dependency="true">wrap:mvn:org.apache.kafka/kafka-clients/${kafka.version}</bundle>
         <bundle>mvn:be.anova.guanaco.transports/kafka/${project.version}</bundle>
     </feature>
 
