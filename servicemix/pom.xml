@@ -5,16 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>be.anova</groupId>
-        <artifactId>guanaco</artifactId>
+        <groupId>io.guanaco</groupId>
+        <artifactId>events</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>be.anova.guanaco</groupId>
+    <groupId>io.guanaco.events</groupId>
     <artifactId>servicemix</artifactId>
     <packaging>pom</packaging>
 
-    <name>Anova :: Guanaco :: ServiceMix</name>
+    <name>Guanaco :: Events :: ServiceMix</name>
 
     <properties>
         <camel.version>2.16.4</camel.version>

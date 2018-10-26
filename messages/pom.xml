@@ -10,23 +10,35 @@
     </parent>
 
     <groupId>io.guanaco.events</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>messages</artifactId>
     <packaging>bundle</packaging>
 
-    <name>Guanaco :: Events :: API</name>
+    <name>Guanaco :: Events :: Messages</name>
 
     <properties>
-        <osgi.export.package>be.anova.guanaco.api</osgi.export.package>
+        <osgi.export.package>be.anova.guanaco.messages</osgi.export.package>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>io.guanaco.events</groupId>
-            <artifactId>messages</artifactId>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-json_2.11</artifactId>
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
+        </dependency>
+
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

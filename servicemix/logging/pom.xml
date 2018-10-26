@@ -4,24 +4,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>be.anova.guanaco</groupId>
+        <groupId>io.guanaco.events</groupId>
         <artifactId>servicemix</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>be.anova.guanaco.servicemix</groupId>
+    <groupId>io.guanaco.events.servicemix</groupId>
     <artifactId>logging</artifactId>
     <packaging>bundle</packaging>
 
-    <name>Anova :: Guanaco :: ServiceMix :: Log Appender</name>
+    <name>Guanaco :: Events :: ServiceMix :: Log Appender</name>
 
     <properties>
-        <osgi.bundle.activator>be.anova.guanaco.servicemix.logging.AppenderActivator</osgi.bundle.activator>
+        <osgi.bundle.activator>io.guanaco.events.servicemix.logging.AppenderActivator</osgi.bundle.activator>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>be.anova.guanaco</groupId>
+            <groupId>io.guanaco.events</groupId>
             <artifactId>dispatcher</artifactId>
         </dependency>
         <dependency>

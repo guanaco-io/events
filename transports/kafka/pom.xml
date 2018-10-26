@@ -4,24 +4,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>be.anova.guanaco</groupId>
+        <groupId>io.guanaco.events</groupId>
         <artifactId>transports</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>be.anova.guanaco.transports</groupId>
+    <groupId>io.guanaco.events.transports</groupId>
     <artifactId>kafka</artifactId>
     <packaging>bundle</packaging>
 
-    <name>Anova :: Guanaco :: Transports :: Kafka</name>
+    <name>Guanaco :: Events :: Transports :: Kafka</name>
 
     <properties>
-        <osgi.bundle.activator>be.anova.guanaco.transports.kafka.KafkaAppenderActivator</osgi.bundle.activator>
+        <osgi.bundle.activator>io.guanaco.events.transports.kafka.KafkaAppenderActivator</osgi.bundle.activator>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>be.anova.guanaco</groupId>
+            <groupId>io.guanaco.events</groupId>
             <artifactId>api</artifactId>
         </dependency>
         <dependency>
