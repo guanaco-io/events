@@ -1,6 +1,5 @@
-# guanaco-events
-If you like Camel and Alpakka, a guanaco might be just the thing for you!
-This subproject provides the event messages and some bundles to collect the events in Karaf/ServiceMix
+# guanaco &mdash; events
+This subproject provides Camel & logging event messages, an Akka-based event dispatcher and some bundles to collect the events in Karaf/ServiceMix and forward them to Kafka topics.
 
 ## Requirements
 
