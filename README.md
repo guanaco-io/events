@@ -4,8 +4,8 @@ This subproject provides the event messages and some bundles to collect the even
 
 ## Requirements
 
-* Apache ServiceMix 7.0.0
-* Apache Kafka 0.10.2.x
+* Apache ServiceMix 7.0.1
+* Apache Kafka 1.1.1
 
 ## Installation
 
@@ -38,7 +38,7 @@ Update the `etc/org.ops4j.pax.logging.cfg` file to send log events to all append
 
 Afterwards, just install the features (business as usual)
 
-   feature:repo-add mvn:be.anova.guanaco/features/1.0-SNAPSHOT/xml/features
+   feature:repo-add mvn:io.guanaco.events/features/1.0-SNAPSHOT/xml/features
    feature:install guanaco-camel-events guanaco-log-appender guanaco-kafka
    
 ## Events
